@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-          leading: Icon(AppRoutes.menuOptions[index].icon, color: Colors.blue,),
+          leading: Icon(AppRoutes.menuOptions[index].icon),
           title: Text(AppRoutes.menuOptions[index].name),
           onTap: () {
             Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
