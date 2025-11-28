@@ -32,6 +32,11 @@ class AppRoutes {
         icon: Icons.credit_card,
         name: 'Tarjetas - Cards',
         screen: const CardScreen()),
+    MenuOption(
+        route: 'inputs',
+        icon: Icons.input,
+        name: 'Inputs',
+        screen: const InputsScreen()),
 
   ];
 

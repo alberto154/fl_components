@@ -20,6 +20,34 @@ class AppTheme {
         // Estilo de los botones de la aplicación
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(foregroundColor: AppTheme.primary),
+        ),
+
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: primary,
+          elevation: 5,
+        ),
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            foregroundColor: primary,
+            shape: const StadiumBorder(),
+            shadowColor: Colors.greenAccent,
+          ),
+        ),
+
+        inputDecorationTheme: InputDecorationTheme(
+          floatingLabelStyle: TextStyle(color: primary),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primary),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),topRight: Radius.circular(10)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primary),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),topRight: Radius.circular(10)),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), topRight: Radius.circular(10)),
+          ),
         )
 
       );
