@@ -33,6 +33,8 @@ class InputsScreen extends StatelessWidget {
                 helperText: 'Solo letras',
                 icon: Icons.account_circle,
                 suffixIcon: Icons.person,
+                formValues: formValues,
+                formProperty: 'nombre',
               ),
               SizedBox(height: 30,),
               CustomTextFormField(
@@ -40,6 +42,8 @@ class InputsScreen extends StatelessWidget {
                 labelText: 'Apellido',
                 icon: Icons.account_circle_outlined,
                 suffixIcon: Icons.person_2_outlined,
+                formValues: formValues,
+                formProperty: 'apellido',
               ),
               SizedBox(height: 30,),
               CustomTextFormField(
@@ -48,6 +52,8 @@ class InputsScreen extends StatelessWidget {
                 icon: Icons.email,
                 suffixIcon: Icons.alternate_email,
                 keyboardType: TextInputType.emailAddress,
+                formValues: formValues,
+                formProperty: 'email',
               ),
               SizedBox(height: 30,),
               CustomTextFormField(
@@ -57,6 +63,20 @@ class InputsScreen extends StatelessWidget {
                 suffixIcon: Icons.lock_outline,
                 keyboardType: TextInputType.visiblePassword,
                 obscureText: true,
+                formValues: formValues,
+                formProperty: 'password',
+              ),
+              SizedBox(height: 30,),
+              DropdownButtonFormField(
+                items: [
+                  DropdownMenuItem(value: 'usuario', child: Text('Usuario')),
+                  DropdownMenuItem(value: 'admin', child: Text('Admin')),
+                  DropdownMenuItem(value: 'editor', child: Text('Editor')),
+                  DropdownMenuItem(value: 'programador', child: Text('Programador')),
+                ],
+                onChanged: ((value){
+                  formValues['role'] = value ?? 'usuario';
+                })
               ),
               SizedBox(height: 30,),
               ElevatedButton(

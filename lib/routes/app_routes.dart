@@ -37,6 +37,17 @@ class AppRoutes {
         icon: Icons.input,
         name: 'Inputs',
         screen: const InputsScreen()),
+     MenuOption(
+        route: 'slider',
+        icon: Icons.slideshow,
+        name: 'Sliders y Checks',
+        screen: const SliderScreen()),
+
+      MenuOption(
+        route: 'ListViewBuilder',
+        icon: Icons.build,
+        name: 'ListView Builder',
+        screen: const ListViewBuilderScreen()),
 
   ];
 
